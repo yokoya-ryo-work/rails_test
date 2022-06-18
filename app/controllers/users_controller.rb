@@ -4,4 +4,10 @@ class UsersController < ApplicationController
         render json: @users
         logger.debug "--------------- @user: #{@users} ---------------"
     end
+
+    def show
+        @user = User.find(1)
+        render json: @user
+        logger.debug "--------------- @user: #{@user} ---------------"
+    end
 end
